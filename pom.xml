@@ -94,7 +94,7 @@
         			<plugin>
           				<groupId>org.apache.maven.plugins</groupId>
           				<artifactId>maven-surefire-plugin</artifactId>
-          				<version>3.2.2</version>
+          				<version>3.0.0-M6</version>
 					<configuration>
 						 <parallel>methods</parallel>
 					  	<runOrder>alphabetical</runOrder>
@@ -103,20 +103,20 @@
 					  	<reuseForks>true</reuseForks>
 					  	<argLine>-Xmx1024m</argLine>
 
-						<properties>
-                       <property>
+			<properties>
+                                    <property>
                                       <name>usedefaultlisteners</name>
                                       <value>false</value> <!-- disabling default listeners is optional -->
-                       </property>
+                            </property>
                              <property>
-                                    <name>listener</name>
+                                      <name>listener</name>
                                          <value>com.mycompany.MyResultListener,com.mycompany.MyAnnotationTransformer,com.mycompany.MyMethodInterceptor</value>
                        </property>
                             <property>
-                                               <name>reporter</name>
+                                       <name>reporter</name>
                                        <value>listenReport.Reporter</value>
                          </property>
-                </properties>
+                       </properties>
 					</configuration>
         			</plugin>
       			</plugins>
