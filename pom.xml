@@ -70,6 +70,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.10.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-failsafe-plugin</artifactId>
+  			<version>3.2.2</version>
+  			<type>maven-plugin</type>
+		</dependency>
 	</dependencies>
 	<build>
         <plugins>
