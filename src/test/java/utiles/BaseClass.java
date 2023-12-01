@@ -79,7 +79,7 @@ public class BaseClass implements ITestListener {
 
         String TimeStamp = d.toString().replace(":", "_").replace(" ", "_");
 
-        File Dest = new File(".\\screenshot\\" + screenShotName + "_" + TimeStamp + ".png");
+        File Dest = new File("./screenshot/" + screenShotName + "_" + TimeStamp + ".png");
         String errflpath = Dest.getAbsolutePath();
         try {
             FileUtils.copyFile(scrFile, Dest);
