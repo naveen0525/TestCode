@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
 
 import objectsMethods.AccountingAccountPayablePage;
 import objectsMethods.LoginPage;
@@ -29,28 +28,28 @@ public class K_AccountingAccountPayableTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		AccPayable = new AccountingAccountPayablePage(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/accountingPayable.properties");
-		test = report.startTest("accountPayableReport");
+//		test = report.startTest("accountPayableReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email ID and Password");
+//		test.log(LogStatus.INFO, "Enter Email ID and Password");
 
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		AccPayable.accountingDashboard();
-		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
+//		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
 
 		AccPayable.selectDate(prop.getProperty("fromDate"), prop.getProperty("toDate"));
-		test.log(LogStatus.INFO, "Select from and to date");
+//		test.log(LogStatus.INFO, "Select from and to date");
 
 		AccPayable.selectPOstatus(prop.getProperty("PO"));
-		test.log(LogStatus.INFO, "Select PO");
+//		test.log(LogStatus.INFO, "Select PO");
 
 		AccPayable.selectVendors(prop.getProperty("Vendor"));
-		test.log(LogStatus.INFO, "Select Vendor");
+//		test.log(LogStatus.INFO, "Select Vendor");
 
 		AccPayable.clickSubmitButton();
-		test.log(LogStatus.INFO, "Click on Submit Button");
+//		test.log(LogStatus.INFO, "Click on Submit Button");
 		Thread.sleep(1000);
 
 		WebElement element = driver.findElement(By.xpath("(//a[@class='page-link'])[2]"));

@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
 
 import objectsMethods.AccountingPriceChangeReportPage;
 import objectsMethods.LoginPage;
@@ -29,22 +28,22 @@ public class P_AccountingPriceChangeReportTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		PriceChangeRprtPg = new AccountingPriceChangeReportPage(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/PriceChangeReport.properties");
-		test = report.startTest("priceChangeReport");
+//		test = report.startTest("priceChangeReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email ID and Password");
+//		test.log(LogStatus.INFO, "Enter Email ID and Password");
 
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		PriceChangeRprtPg.accountingDashboard();
-		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
+//		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
 
 		PriceChangeRprtPg.selectDate(prop.getProperty("fromDate"), prop.getProperty("toDate"));
-		test.log(LogStatus.INFO, "Select from and to date");
+//		test.log(LogStatus.INFO, "Select from and to date");
 
 		PriceChangeRprtPg.clickSubmitButton();
-		test.log(LogStatus.INFO, "Click on Submit Button");
+//		test.log(LogStatus.INFO, "Click on Submit Button");
 		
 		WebElement element = driver.findElement(By.xpath("//h5[contains(text(), 'Price Change Report')]"));
 

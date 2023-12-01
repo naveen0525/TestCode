@@ -19,17 +19,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
 public class BaseClass implements ITestListener {
 
     public static WebDriver driver;
-    public static ExtentReports report;
+    /*public static ExtentReports report;
     protected static ExtentTest test;
-    public static ITestResult result;
+    public static ITestResult result;*/
 
     public WebDriver setUp() throws IOException {
 
@@ -87,7 +82,7 @@ public class BaseClass implements ITestListener {
             FileUtils.copyFile(scrFile, Dest);
         } catch (IOException e) {
             // TODO Auto-generated catch block
-            test.log(LogStatus.FAIL, e);
+//            test.log(LogStatus.FAIL, e);
         }
         return errflpath;
 
@@ -102,7 +97,7 @@ public class BaseClass implements ITestListener {
 
     public void onStart(ITestContext context) {
         // TODO Auto-generated method stub
-        report = new ExtentReports("./reports/ExtentReportResults.html/");
+//        report = new ExtentReports("./reports/ExtentReportResults.html/");
 
     }
 
@@ -110,8 +105,8 @@ public class BaseClass implements ITestListener {
         // TODO Auto-generated method stub
 
         if (result.getStatus() == ITestResult.SUCCESS) {
-            test.log(LogStatus.PASS, (result.getName() + " Test PASSED"));
-            report.flush();
+//            test.log(LogStatus.PASS, (result.getName() + " Test PASSED"));
+//            report.flush();
         }
 
         System.out.println("Test Pass");
@@ -127,9 +122,9 @@ public class BaseClass implements ITestListener {
 
 //			test.log(LogStatus.FAIL, (result.getName() + " Test FAILED "));
             String screenShot = scrShot(result.getName());
-            test.log(LogStatus.FAIL, "Test Failed: " + test.addScreenCapture(screenShot));
-            test.log(LogStatus.FAIL, result.getThrowable());
-            report.flush();
+//            test.log(LogStatus.FAIL, "Test Failed: " + test.addScreenCapture(screenShot));
+//            test.log(LogStatus.FAIL, result.getThrowable());
+//            report.flush();
 
         }
 

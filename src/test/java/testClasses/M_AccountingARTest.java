@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
 
 import objectsMethods.AccountingARPage;
 import objectsMethods.LoginPage;
@@ -29,28 +28,28 @@ public class M_AccountingARTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		ARpage = new AccountingARPage(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/AR.properties");
-		test = report.startTest("accountReceivableReport");
+//		test = report.startTest("accountReceivableReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email ID and Password");
+//		test.log(LogStatus.INFO, "Enter Email ID and Password");
 
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		ARpage.accountingDashboard();
-		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
+//		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
 
 		ARpage.selectCustomerFromDropDown(prop.getProperty("Customer"));
-		test.log(LogStatus.INFO, "Select Customer");
+//		test.log(LogStatus.INFO, "Select Customer");
 
 		ARpage.selectDate(prop.getProperty("fromDate"), prop.getProperty("toDate"));
-		test.log(LogStatus.INFO, "Select from and to date");
+//		test.log(LogStatus.INFO, "Select from and to date");
 
 		ARpage.clickSubmitButton();
-		test.log(LogStatus.INFO, "Click on Submit Button");
+//		test.log(LogStatus.INFO, "Click on Submit Button");
 
 		ARpage.aRAging();
-		test.log(LogStatus.INFO, "Click on AR Paging Button");
+//		test.log(LogStatus.INFO, "Click on AR Paging Button");
 
 		WebElement element = driver.findElement(By.xpath("(//div[@class='row'])[2]"));
 

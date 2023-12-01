@@ -8,8 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
-
 import objectsMethods.AddNewProductPage;
 import objectsMethods.LoginPage;
 import utiles.BaseClass;
@@ -27,44 +25,44 @@ public class E_AddNewProductTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		AddNewProductPg = new AddNewProductPage(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/AddNewProduct.properties");
-		test = report.startTest("addNewProduct");
+//		test = report.startTest("addNewProduct");
 		
 		/* Provider's Inventory DashBoard */
 
 		/* TestCase# 12 */
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email Id and Password");
+//		test.log(LogStatus.INFO, "Enter Email Id and Password");
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		AddNewProductPg.clickInventoryLinkDashboard();
-		test.log(LogStatus.INFO, "Click on Inventory Dashboard Link");
+//		test.log(LogStatus.INFO, "Click on Inventory Dashboard Link");
 
 		AddNewProductPg.clickCategoryLink();
-		test.log(LogStatus.INFO, "Click on Category Link");
+//		test.log(LogStatus.INFO, "Click on Category Link");
 
 		AddNewProductPg.clickSelectCategory();
-		test.log(LogStatus.INFO, "Select Category");
+//		test.log(LogStatus.INFO, "Select Category");
 
 		AddNewProductPg.clickAddNewProductButton();
-		test.log(LogStatus.INFO, "Click on Add New Product Button");
+//		test.log(LogStatus.INFO, "Click on Add New Product Button");
 
 		AddNewProductPg.generalInfo_action(prop.getProperty("NewProductName"), prop.getProperty("NewProdctDescription"),
 				prop.getProperty("NewProductPriority"), prop.getProperty("NewProductUnitWeight"));
-		test.log(LogStatus.INFO, "Enter General Information");
+//		test.log(LogStatus.INFO, "Enter General Information");
 
 		AddNewProductPg.clickNextButtonOne();
-		test.log(LogStatus.INFO, "Click on Next Button");
+//		test.log(LogStatus.INFO, "Click on Next Button");
 
 		AddNewProductPg.inventoryInfo_action(prop.getProperty("NewProductCurrentInventory"),
 				prop.getProperty("NewProductCostPerUnit"), prop.getProperty("NewProductTotalMarkUp"),
 				prop.getProperty("NewProductMinInventory"), prop.getProperty("NewProductMaxInventory"),
 				prop.getProperty("NewProductWhenInventoryAt"), prop.getProperty("NewProductProductPrice"),
 				prop.getProperty("NewProductVendorPrice"));
-		test.log(LogStatus.INFO, "Enter Invenotry Information");
+//		test.log(LogStatus.INFO, "Enter Invenotry Information");
 
 		AddNewProductPg.saveButton();
-		test.log(LogStatus.INFO, "Click on Save Button");
+//		test.log(LogStatus.INFO, "Click on Save Button");
 
 		WebElement element = driver.findElement(By.xpath("(//strong)[1]"));
 

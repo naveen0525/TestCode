@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+
 
 import objectsMethods.AccountPayablePageApAging;
 import objectsMethods.LoginPage;
@@ -29,19 +29,19 @@ public class L_AccountPayableApAgingTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		ApAging = new AccountPayablePageApAging(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/accountingPayable.properties");
-		test = report.startTest("agAgingTab");
+//		test = report.startTest("agAgingTab");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email ID and Password");
+//		test.log(LogStatus.INFO, "Enter Email ID and Password");
 
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		ApAging.accountingDashboard();
-		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
+//		test.log(LogStatus.INFO, "Click on Accounting Dashboard");
 
 		ApAging.apAging();
-		test.log(LogStatus.INFO, "Click on AP Aging Button");
+//		test.log(LogStatus.INFO, "Click on AP Aging Button");
 
 		WebElement element = driver.findElement(By.xpath("(//div[@class='row'])[2]"));
 

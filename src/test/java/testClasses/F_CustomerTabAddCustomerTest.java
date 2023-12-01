@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+
 
 import objectsMethods.CustomerTabAddCustomerPage;
 import objectsMethods.LoginPage;
@@ -29,25 +29,25 @@ public class F_CustomerTabAddCustomerTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		addCustPg = new CustomerTabAddCustomerPage(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/AddNewCustomer.properties");
-		test = report.startTest("AddCustomer");
+//		test = report.startTest("AddCustomer");
 
 		/* Provider's Customer DashBoard */
 
 		/* TestCase# 11 */
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email ID and Password");
+//		test.log(LogStatus.INFO, "Enter Email ID and Password");
 
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		addCustPg.clickCustomerDashboardLink();
-		test.log(LogStatus.INFO, "Click on Customer Dashboard Link");
+//		test.log(LogStatus.INFO, "Click on Customer Dashboard Link");
 
 		addCustPg.clickCustomerListTab();
-		test.log(LogStatus.INFO, "Click on Customer List Tab");
+//		test.log(LogStatus.INFO, "Click on Customer List Tab");
 
 		addCustPg.clickAddNewButton();
-		test.log(LogStatus.INFO, "Click on Add New Button");
+//		test.log(LogStatus.INFO, "Click on Add New Button");
 
 		addCustPg.addCustomerAction(prop.getProperty("CustomerTabFirstName"), prop.getProperty("CustomerTabLastName"),
 				prop.getProperty("CustomerTabEmail"), prop.getProperty("CustomerTabPhone"),
@@ -55,10 +55,10 @@ public class F_CustomerTabAddCustomerTest extends BaseClass {
 				prop.getProperty("CustomerTabAddress"), prop.getProperty("CustomerTabCountry"),
 				prop.getProperty("CustomerTabState"), prop.getProperty("CustomerTabCity"),
 				prop.getProperty("CustomerTabLocation"), prop.getProperty("CustomerTabStreet"));
-		test.log(LogStatus.INFO, "Enter New Customer Detail");
+//		test.log(LogStatus.INFO, "Enter New Customer Detail");
 
 		addCustPg.clickSubmitButton();
-		test.log(LogStatus.INFO, "Click on Submit Button");
+//		test.log(LogStatus.INFO, "Click on Submit Button");
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
 		WebElement element = driver.findElement(By.xpath("(//strong)[1]"));

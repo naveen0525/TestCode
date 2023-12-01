@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+
 
 import objectsMethods.AddNewSubCategoryPage;
 import objectsMethods.LoginPage;
@@ -28,32 +28,32 @@ public class D_AddSubCategoryTest extends BaseClass {
 		loginPg = new LoginPage(driver);
 		AddSubCategoryPg = new AddNewSubCategoryPage(driver);
 		Properties prop = readPropertiesFile("./src/Resources/Property/addNewSubCategory.properties");
-		test = report.startTest("addNewSubCategory");
+//		test = report.startTest("addNewSubCategory");
 		
 		/* Provider's Inventory DashBoard */
 
 		/* TestCase# 13 */
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
-		test.log(LogStatus.INFO, "Enter Email ID and Password");
+//		test.log(LogStatus.INFO, "Enter Email ID and Password");
 
 		loginPg.clickLogin();
-		test.log(LogStatus.INFO, "Click on Login Button");
+//		test.log(LogStatus.INFO, "Click on Login Button");
 
 		AddSubCategoryPg.clickInventoryModule();
-		test.log(LogStatus.INFO, "Click on Inventory Module Link");
+//		test.log(LogStatus.INFO, "Click on Inventory Module Link");
 
 		AddSubCategoryPg.categoryTab();
-		test.log(LogStatus.INFO, "Click on Category Tab");
+//		test.log(LogStatus.INFO, "Click on Category Tab");
 
 		AddSubCategoryPg.selectCategoryFromList();
-		test.log(LogStatus.INFO, "Select Any Category");
+//		test.log(LogStatus.INFO, "Select Any Category");
 
 		AddSubCategoryPg.addNewSubCategory_action(prop.getProperty("NewSubCategoryName"),
 				prop.getProperty("NewSubCategoryDescription"), prop.getProperty("NewSubCategoryPriority"));
-		test.log(LogStatus.INFO, "Enter New SubCategory Detail");
+//		test.log(LogStatus.INFO, "Enter New SubCategory Detail");
 
 		AddSubCategoryPg.saveButton();
-		test.log(LogStatus.INFO, "Click on Save Button");
+//		test.log(LogStatus.INFO, "Click on Save Button");
 
 		WebElement element = driver.findElement(By.xpath("(//strong)[1]"));
 
