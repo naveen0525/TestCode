@@ -32,12 +32,12 @@
 
 
 		<!--
-		https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-surefire-plugin</artifactId>
 			<version>3.2.1</version>
-		</dependency>
+		</dependency> -->
 
 
 		<dependency>
@@ -58,6 +58,7 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.5.3</version>
+			<scope>test</scope>
 		</dependency>
 
 
