@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import java.util.Date;
 import java.util.Properties;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.apache.hc.core5.util.Timeout;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -39,9 +42,9 @@ public class BaseClass implements ITestListener {
 //        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
         driver.get(prop.getProperty("url"));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 
         System.out.println("Running the browser");
 
