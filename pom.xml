@@ -100,7 +100,7 @@
           				<version>2.14.1</version>
 					<configuration>
 						<fork>1C</fork>
-						<argLine>-Dfile.encoding=UTF-8 -Duser.language=en -XFFOOOBEEER -Duser.region=US -showversion -Xmx6g -Xms2g -XX:+PrintGCDetails </argLine>
+						
 					</configuration>
         			</plugin>
       			</plugins>
