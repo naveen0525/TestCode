@@ -96,8 +96,11 @@
           				<artifactId>maven-surefire-plugin</artifactId>
           				<version>2.14.1</version>
 					<configuration>
-						<fork>1C</fork>
-						
+						 <parallel>methods</parallel>
+					  	<runOrder>alphabetical</runOrder>
+                                          	<forkCount>1C</forkCount>
+					  	<reuseForks>true</reuseForks>
+					  	<argLine>-Xmx1024m</argLine>
 					</configuration>
         			</plugin>
       			</plugins>
