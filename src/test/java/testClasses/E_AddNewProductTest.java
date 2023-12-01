@@ -26,7 +26,7 @@ public class E_AddNewProductTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		AddNewProductPg = new AddNewProductPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\AddNewProduct.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/AddNewProduct.properties");
 		test = report.startTest("addNewProduct");
 		
 		/* Provider's Inventory DashBoard */

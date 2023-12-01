@@ -28,7 +28,7 @@ public class C_AddNewCategoryTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		AddCategoryPg = new AddNewCategoryPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\addNewCategory.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/addNewCategory.properties");
 		test = report.startTest("addNewCategory");
 
 		/* Provider's Inventory DashBoard */

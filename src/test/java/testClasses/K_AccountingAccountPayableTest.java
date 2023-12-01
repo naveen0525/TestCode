@@ -28,7 +28,7 @@ public class K_AccountingAccountPayableTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		AccPayable = new AccountingAccountPayablePage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\accountingPayable.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/accountingPayable.properties");
 		test = report.startTest("accountPayableReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));

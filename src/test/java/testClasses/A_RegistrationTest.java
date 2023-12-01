@@ -23,7 +23,7 @@ public class A_RegistrationTest extends BaseClass {
 	public void registration() throws IOException, InterruptedException {
 		driver = setUp();
 		registrationpg = new RegistrationPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\newRegistration.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/newRegistration.properties");
 		test = report.startTest("registration");
 
 		/* Provider's DashBoard */

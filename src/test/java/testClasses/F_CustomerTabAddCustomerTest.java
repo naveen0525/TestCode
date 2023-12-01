@@ -28,7 +28,7 @@ public class F_CustomerTabAddCustomerTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		addCustPg = new CustomerTabAddCustomerPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\AddNewCustomer.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/AddNewCustomer.properties");
 		test = report.startTest("AddCustomer");
 
 		/* Provider's Customer DashBoard */

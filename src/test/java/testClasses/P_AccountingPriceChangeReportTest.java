@@ -28,7 +28,7 @@ public class P_AccountingPriceChangeReportTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		PriceChangeRprtPg = new AccountingPriceChangeReportPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\PriceChangeReport.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/PriceChangeReport.properties");
 		test = report.startTest("priceChangeReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));

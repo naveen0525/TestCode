@@ -22,7 +22,7 @@ public class B_LoginTest extends BaseClass {
 	public void login() throws IOException, InterruptedException {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\Login.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/Login.properties");
 		test = report.startTest("Login");
 
 		/* Provider's DashBoard */

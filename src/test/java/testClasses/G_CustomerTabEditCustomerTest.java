@@ -28,7 +28,7 @@ public class G_CustomerTabEditCustomerTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		EditCustPg = new CustomerTabEditCustomerPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\EditCustomerDetail.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/EditCustomerDetail.properties");
 		test = report.startTest("EditCustomer");
 
 		/* Provider's Customer DashBoard */

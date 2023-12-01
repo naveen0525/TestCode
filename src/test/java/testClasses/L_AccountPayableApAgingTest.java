@@ -28,7 +28,7 @@ public class L_AccountPayableApAgingTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		ApAging = new AccountPayablePageApAging(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\accountingPayable.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/accountingPayable.properties");
 		test = report.startTest("agAgingTab");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));

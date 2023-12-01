@@ -28,7 +28,7 @@ public class O_AccountingInventoryAnalysisTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		InvAnalysisPg = new AccountingInventoryAnalysisPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\InventoryAnalysis.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/InventoryAnalysis.properties");
 		test = report.startTest("inventoryAnalysisReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));

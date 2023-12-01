@@ -33,9 +33,7 @@ public class BaseClass implements ITestListener {
 
     public WebDriver setUp() throws IOException {
 
-        Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\url.properties");
-        System.setProperty("webdriver.chrome.driver", ".\\src\\Resources\\drivers\\chromedriver.exe");
-
+        Properties prop = readPropertiesFile("./src/Resources/Property/url.properties");
 
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();

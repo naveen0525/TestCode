@@ -25,7 +25,7 @@ public class H_OrderProcessTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		orderProcessPg = new OrderProcessPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\url.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/url.properties");
 		test = report.startTest("orderProcessing");
 
 		/* Provider's DashBoard */

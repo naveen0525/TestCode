@@ -27,7 +27,7 @@ public class I_PosOrderTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		posPg = new PosPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\POS.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/POS.properties");
 		test = report.startTest("posOrder");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));

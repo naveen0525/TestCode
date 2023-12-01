@@ -28,7 +28,7 @@ public class M_AccountingARTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		ARpage = new AccountingARPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\AR.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/AR.properties");
 		test = report.startTest("accountReceivableReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));

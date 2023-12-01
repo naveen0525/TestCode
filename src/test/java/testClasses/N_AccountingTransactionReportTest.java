@@ -28,7 +28,7 @@ public class N_AccountingTransactionReportTest extends BaseClass {
 		driver = setUp();
 		loginPg = new LoginPage(driver);
 		TransReportPg = new AccountingTransactionReportPage(driver);
-		Properties prop = readPropertiesFile(".\\src\\Resources\\Property\\TransactionReport.properties");
+		Properties prop = readPropertiesFile("./src/Resources/Property/TransactionReport.properties");
 		test = report.startTest("transactionReport");
 
 		loginPg.enterCredentials(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"));
