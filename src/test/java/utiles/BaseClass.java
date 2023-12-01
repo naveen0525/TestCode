@@ -69,6 +69,7 @@ public class BaseClass implements ITestListener {
             fis.close();
         }
         return prop;
+        
     }
 
     public static String scrShot(String screenShotName) {
