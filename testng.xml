@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">\
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/F Drive/amit/Projects/MyTeam/Members/Naveen/Testing_FederalMetals/src/test/java/testClasses/B_LoginTest.java">
+        <classes><class name="testClasses.B_LoginTest">
+            <methods><include name="login"/></methods>
+        </class></classes>
+    </test>
+</suite>
